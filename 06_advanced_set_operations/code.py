@@ -7,7 +7,7 @@ abroad = {"Bob", "Anne"}
 # If there are 3 friends, and 2 are abroad, that means that 1 friend is local.
 # We can easily calculate which names are in `friends` but not in `abroad` by using `.difference`
 
-local = friends.difference(abroad)
+local = friends.difference(abroad) #!---- функция берёт сет с frineds и убирает с него то что в abroad
 print(local)
 
 print(abroad.difference(friends))  # This returns an empty set
@@ -20,7 +20,7 @@ abroad = {"Bob", "Anne"}
 # friends = ...
 # If we have 1 local friend and 2 abroad friends, we could calculate the total friends by using `.union`
 
-friends = local.union(abroad)
+friends = local.union(abroad) #!  Union объединяет сеты
 print(friends)
 
 # -- Intersection of two sets --

@@ -1,9 +1,15 @@
-name = input("Enter your name: ")
-print(name)
+name = input("Can you write your name: ")
+user_name = "Hi eblan {}"
+user__result = user_name.format(name)
 
-# -- Mathematics on user input --
+size__input = input("How big is your penis: ") #!----Выдаёт всё только в виде String
+square__feet = int(size__input)
 
-size_input = input("How big is your house (in square feet): ")
-square_feet = int(size_input)
-square_metres = square_feet / 10.8  # Make sure this is correct
-print(f"{square_feet} square feet is {square_metres} square metres.")
+square__meters = square__feet/2
+
+
+square__user__result = "Your penis was {}  now is 2 times smaller: {} sm "
+square__user__final = square__user__result.format(square__feet,square__meters)
+
+
+print(user__result + "," +  square__user__final)

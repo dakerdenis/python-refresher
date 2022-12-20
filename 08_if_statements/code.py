@@ -9,7 +9,7 @@ else:
 
 # -- Problem: user not entering what we expect --
 
-day_of_week = input("What day of the week is it today? ").lower()
+day_of_week = input("What day of the week is it today? ").lower() #!---change entire string to lowercase
 
 if day_of_week == "monday":
     print("Have a great start to your week!")

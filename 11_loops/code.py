@@ -1,60 +1,28 @@
-# -- While loop --
-
 number = 7
-play = input("Would you like to play? (Y/n) ")
-
-while play != "n":
-    user_number = int(input("Guess our number: "))
-    if user_number == number:
-        print("You guessed correctly!")
-    elif abs(number - user_number) == 1:
-        print("You were off by 1.")
-    else:
-        print("Sorry, it's wrong!")
-
-    play = input("Would you like to play? (Y/n) ")
 
 
-# -- The break keyword --
+while True:   #!--- создаёт безконечный loop
+    user_input = input("Enter 'y' if you would like to play: ")
 
-while True:
-    play = input("Would you like to play? (Y/n) ")
-
-    if play == "n":
-        break  # Exit the loop
+    if user_input =="n":
+        break
 
     user_number = int(input("Guess our number: "))
     if user_number == number:
         print("You guessed correctly!")
-    elif abs(number - user_number) == 1:
+        break
+    elif abs(number - user_number) == 1:   
         print("You were off by 1.")
     else:
-        print("Sorry, it's wrong!")
+        print("Sorry, it's wrong!") 
 
+frineds = ["Eblan1" , "Eblan2", "Eblan3", "Eblan4"]
 
-# -- For loop --
+#for friend in frineds:
+    #print(f"{friend} is Eblan suka")
 
-friends = ["Rolf", "Jen", "Bob", "Anne"]
-for friend in friends:
-    print(f"{friend} is my friend.")
+grades = [35, 67,98,23,13]
+total = sum(grades)   #!-----sum() суммирует все значения в массиве или списке
+amount = len(grades)  #!-----len() выдаёт значение в виде длины массива или списка
 
-# -- For loop 2 -- Average
-
-grades = [35, 67, 98, 100, 100]
-total = 0
-amount = len(grades)
-
-for grade in grades:
-    total += grade
-
-print(total / amount)
-
-# -- Rewritten using sum() --
-
-grades = [35, 67, 98, 100, 100]
-total = sum(grades)
-amount = len(grades)
-
-print(total / amount)
-
-# You kinda just have to "know" that exists. It takes time and experience, but searching for almost _everything_ really helps. For example, you could've searched for "sum list of numbers python".
+print(total/amount)

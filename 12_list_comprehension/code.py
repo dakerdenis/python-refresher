@@ -1,31 +1,24 @@
+a= 1
+#!-----List comprehesion - позволяет сразу налету создавать список из уже имеющегося списка
+#! -- пример внизу находит список из чисел 
 numbers = [1, 3, 5]
-squares = [x * 2 for x in numbers]
-
-# -- Dealing with strings --
-
-friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
-starts_s = []
-
-for friend in friends:
-    if friend.startswith("S"):
-        starts_s.append(friend)
-
-print(starts_s)
+doubled = [x * 2 for x in numbers ] #!-- сразу добавляет в список по одному значения из списка выше сразу умнажая их на 2
+print(doubled)
 
 
-# -- Can make a new list of friends whose name starts with S --
 
-friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
-starts_s = [friend for friend in friends if friend.startswith("S")]
 
-print(starts_s)
 
-# -- List comprehension creates a _new_ list --
 
-friends = ["Sam", "Samantha", "Saurabh"]
-starts_s = [friend for friend in friends if friend.startswith("S")]  # same as above
 
-print(friends)
-print(starts_s)
-print(friends is starts_s)
-print("friends: ", id(friends), " starts_s: ", id(starts_s))
+
+
+friends = ["Sam", "Stalker", "Samantha"]
+
+start_s = [name for name in friends if name.startswith("S")]
+#!-- friends и новый список start_s который создан с нуля, они могут иметь одинаковые значения,но они разные сами по себе поскольку занимают разные места в памяти
+#for friend in friends:
+#    if friend.startswith("S"):
+#        start_s.append(friend)
+
+print(start_s)

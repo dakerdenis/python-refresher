@@ -30,5 +30,5 @@ science = {"Bob", "Jen", "Adam", "Anne"}
 
 # Given these two sets of students, we can calculate those who do both art and science by using `.intersection`
 
-both = art.intersection(science)
-print(both) #!---
+both = art.intersection(science) #!--- выдаёт значение в которых есть пересечение со значениями 
+print(both) 

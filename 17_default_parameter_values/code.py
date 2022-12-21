@@ -1,5 +1,5 @@
-def add(x, y=3):
-    print(x + y)
+def add(x, y=3):   
+    print(x + y)   #!--y has default value is 3
 
 
 add(5)  # 8

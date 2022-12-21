@@ -7,7 +7,7 @@ print(add(5, 7))
 # -- Written as a lambda --
 
 add = lambda x, y: x + y
-print(add(5, 7))
+print(add(5, 7)) 
 
 # Four parts
 # lambda
@@ -27,7 +27,7 @@ def double(x):
 sequence = [1, 3, 5, 9]
 
 doubled = [
-    double(x) for x in sequence
+    double(x) for x in sequence #!-- double() функция сверху мы засунули в loop внутри спписка массива
 ]  # Put the result of double(x) in a new list, for each of the values in `sequence`
 doubled = map(double, sequence)
 print(list(doubled))

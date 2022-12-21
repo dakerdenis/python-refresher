@@ -16,6 +16,7 @@ print(doubled)
 friends = ["Sam", "Stalker", "Samantha"]
 
 start_s = [name for name in friends if name.startswith("S")]
+
 #!-- friends и новый список start_s который создан с нуля, они могут иметь одинаковые значения,но они разные сами по себе поскольку занимают разные места в памяти
 #for friend in friends:
 #    if friend.startswith("S"):

@@ -5,52 +5,24 @@ def average(sequence):
     return sum(sequence) / len(sequence)
 
 
-print(average(student["grades"]))
-
-# But wouldn't it be nice if we could...
-# print(student.average()) ?
-
 
 class Student:
-    def __init__(self):
-        self.name = "Rolf"
-        self.grades = (89, 90, 93, 78, 90)
+    def __init__(self_suka, name, grades):   #?=-----__init__   специальное особое название, function inside class called method
+        self_suka.name = name  #?----  take all from self and accesing name property inside of self  CREATE ELEMENT CALLED SELF_SUKA
+        self_suka.grades = grades
 
-    def average(self):
-        return sum(self.grades) / len(self.grades)
+    #?  average - use object which was created upper - init
+    def average_grade(self_suka):
+        return sum(self_suka.grades) / len(self_suka.grades)
 
+student = Student("Bob",(89, 90, 93, 78, 90))   #? - python create empty container
+student2 = Student("Ebllan",(23, 44, 54, 76, 87))  
 
-student = Student()
-print(student.average())
-# Identical to Student.average(student)
+print(student.average_grade())
+print(student.name)
+print(student.grades)
+print("----------------")
+print(student2.average_grade())
+print(student2.name)
+print(student2.grades)
 
-
-# -- Parameters in __init__ --
-
-
-class Student:
-    def __init__(self, name, grades):
-        self.name = name
-        self.grades = grades
-
-    def average(self):
-        return sum(self.grades) / len(self.grades)
-
-
-student = Student("Bob", (36, 67, 90, 100, 100))
-print(student.average())
-
-# -- Remember *args ? --
-
-
-class Student:
-    def __init__(self, name, *grades):
-        self.name = name
-        self.grades = grades
-
-    def average(self):
-        return sum(self.grades) / len(self.grades)
-
-
-student = Student("Bob", 36, 67, 90, 100, 100)
-print(student.average())

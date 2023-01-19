@@ -16,7 +16,7 @@ add(y=3)  # Error, missing x
 default_y = 3
 
 
-def add(x, y=default_y):
+def add(x, y=default_y): #!---- default value inside function when it was created can't be changed  
     sum = x + y
     print(sum)
 

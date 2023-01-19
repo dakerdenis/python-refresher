@@ -13,7 +13,7 @@ print(result)  # None
 
 
 def add(x, y):
-    return x + y
+    return x + y  #!-----функция возвращает значние тупо и похер что с ним делать.
 
 
 add(1, 2)  # Nothing printed out anymore.

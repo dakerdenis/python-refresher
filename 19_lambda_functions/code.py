@@ -29,7 +29,7 @@ sequence = [1, 3, 5, 9]
 doubled = [
     double(x) for x in sequence #!-- double() функция сверху мы засунули в loop внутри спписка массива
 ]  # Put the result of double(x) in a new list, for each of the values in `sequence`
-doubled = map(double, sequence)
+doubled = map(double, sequence) #!--double фкнцкия что делать , sequence - список который надо поменять
 print(list(doubled))
 
 # -- Written as a lambda --

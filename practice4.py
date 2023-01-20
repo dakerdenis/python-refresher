@@ -196,10 +196,13 @@ import math
 # 
 # histogram([2, 3, 6, 5])
 #? 27. Write a Python program that concatenates all elements in a list into a string and returns it
-def concat(value):
-    string=''
-    for x in value:
-        string += str(x)
-    return string
+# def concat(value):
+#     string=''
+#     for x in value:
+#         string += str(x)
+#     return string
+# 
+# print(concat([2,3,4,5,5,56]))
+#? 28. Write a Python program to print all even numbers from a given list of numbers
+#?  in the same order and stop printing any after 237 in the sequence
 
-print(concat([2,3,4,5,5,56]))

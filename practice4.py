@@ -206,3 +206,130 @@ import math
 #? 28. Write a Python program to print all even numbers from a given list of numbers
 #?  in the same order and stop printing any after 237 in the sequence
 
+#numbers = [    
+#    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+#    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+#    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+#    958,743, 527
+#    ]
+#
+#def even_numbers(value):
+#    for x in value:
+#        if x == 237:
+#            print(x)
+#            break
+#        elif x % 2 ==0:
+#            print(x)
+#
+#
+#even_numbers(numbers)
+
+
+# ? 29. Write a Python program that prints out all colors from color_list_1 that are not present in color_list_2. Go to the editor
+# ? Test Data :
+# ? color_list_1 = set(["White", "Black", "Red"])
+# ? color_list_2 = set(["Red", "Green"])
+# ? Expected Output :
+# ? {'Black', 'White'}
+
+# 
+# color_list_1 = set(["White", "Black", "Red", "Green"])
+# color_list_2 = set(["Red", "Green","Black","Blue","Suka"])
+# 
+# print("Differenct of color_list_1 and color_list_2:")
+# print(color_list_1.difference(color_list_2))   #? - Выдаёт значения которых нету во втором списке
+# print(color_list_2.difference(color_list_1)) #? - выдаёт значения которых нету в первом
+
+#? 33. Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero
+#numbers = [1,2,3]
+#
+#def sum_integers(a, b ,c):
+#    sum = 0
+#    if a == b or b ==c or c ==a:
+#        return sum
+#    else:
+#        sum = a +b +c
+#        return sum
+#
+#print(sum_integers(10,2,3))
+#        
+
+#? 34. Write a Python program to sum two given integers. However, if the sum is between 15 and 20 it will return 20.
+#def test(a ,b):
+#    sum= 0
+#    sum = a +b
+#    if sum > 15 and sum < 20:
+#        return 20
+#    else:
+#         return sum
+#
+#print(test(10,7))
+
+#? 35. Write a Python program that returns true if the two given integer values are equal or their sum or difference is 5.
+
+#! isinstance(5,int)
+
+#def add_numbers(a, b):
+#   if not (isinstance(a, int) and isinstance(b, int)):
+#       return "Inputs must be integers!"
+#   return a + b
+
+#? 36 Write a Python program to add two objects if both objects are integers
+
+#def add_objects(a,b):
+#    if not(isinstance(a,int) and isinstance(b,int) ):
+#        return a + b
+#
+#? 38. Write a Python program to solve (x + y) * (x + y).
+
+#x, y = 4, 3
+#result = x * x + 2 * x * y + y * y
+#! print("({} + {}) ^ 2) = {}".format(x, y, result))
+
+
+#! 41. Write a Python program to check whether a file exists.
+#   import os.path
+#   print(os.path.isfile('main.txt'))
+#   print(os.path.isfile('main.py'))
+#   import os.path
+#   print(os.path.exists('main.txt'))
+#   print(os.path.exists('main.py'))
+#   
+#   my_file = open('main.py')
+#   try:
+#      my_file.close()
+#      print("File found!")
+#   except FileNotFoundError:
+#      print("File not found!")
+#? 44. Write a Python program to locate Python site packages
+# import site; 
+# print(site.getsitepackages())
+
+
+#*--------------------------------------------------------------------------
+
+class Person:
+    def __init__(self,age,weight,height,first_name,last_name, catch_phrase):
+        self.age = age
+        self.weight = weight
+        self.height = height
+        self.first_name = first_name
+        self.last_name = last_name
+        self.catch_phrase = catch_phrase
+
+user = Person(25, 80, 177, "Jon","Snow", "You know that snow")
+# print(user.age)
+
+
+class Robot:
+    def introduce_self(self):
+        print("My name is " + self.name)
+
+r1 = Robot()
+r1.name = "John"
+r2 = Robot()
+r2.name = "Suka"
+
+r1.introduce_self()
+r2.introduce_self()
+#*--------------------------------------------------------------------------

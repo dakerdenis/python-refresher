@@ -24,6 +24,11 @@ ClassTest.static_method()
 # Class methods are often used as factories.
 
 
+
+
+
+
+
 class Book:
     TYPES = ("hardcover", "paperback")
 

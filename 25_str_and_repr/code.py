@@ -1,43 +1,40 @@
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name, age):              #special method - по умолчанию если мы вызываем класс,питон сам вызывает метод инит
         self.name = name
         self.age = age
 
+    def __str__(self):                          #__str__ - method which called when we want to tuen object tot string
+        return f"Person {self.name} , {self.age} years old"
+    
+    def __repr__(self):                         #to be returning string that allow recreate object very easy
+        return f"<Person ('{self.name}' , {self.age} )>"
 
-bob = Person("Bob", 35)
-print(bob)  # Not the nicest thing to read!
 
-# -- __str__ --
-# The goal of __str__ is to return a nice, easy to read string for end users.
+bob = Person("bob",35)                          #bob is an object which we had created
+
+bob.name = "Suka"
+
+#print(bob)
 
 
-class Person:
-    def __init__(self, name, age):
+class Store:
+    def __init__(self, name, items):
         self.name = name
-        self.age = age
+        self.items = []
+        # You'll need 'name' as an argument to this method.
+        # Then, initialise 'self.name' to be the argument, and 'self.items' to be an empty list.
+    
+    def add_item(self, name, price):
+        # Create a dictionary with keys name and price, and append that to self.items.
+        suka = {'name': name , "price": price}
+        self.items.append(suka)
 
-    def __str__(self):
-        return f"Person {self.name}, {self.age} years old"
-
-
-bob = Person("Bob", 35)
-print(bob)  # Much nicer
-
-# -- __repr__ --
-# The goal of __repr__ is to be unambiguous, and if possible what it outputs should allow us to re-create an identical object.
-
-
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def __repr__(self):
-        # I'm adding the < > just so it's clear that this is an object we're printing out!
-        return (
-            f"<Person({self.name!r}, {self.age})>"
-        )  # !r calls the __repr__ method of the thing.
+    def stock_price(self):
+        # Add together all item prices in self.items and return the total.
+        total = 0
+        for item in self.items:
+            total +=item['price']
+        return total
+        return sum([item['price'] for item in self.items])
 
 
-bob = Person("Bob", 35)
-print(bob)  # Not as nice, but we could re-create "Bob" very easily.

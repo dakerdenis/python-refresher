@@ -32,8 +32,8 @@ class Person:
 tom  = Person("Tom",23)
 bob = Person("Bob", 38)
 
-tom.display_info()
-bob.display_info()
+#tom.display_info()
+#bob.display_info()
 
 
 class Count:
@@ -47,4 +47,23 @@ class Count:
         return number
 
 num = Count(1,2)
-print(num.display_info())
+#print(num.display_info())
+
+
+class Dog:
+
+    attr1 = "mammal"
+
+    def __init__(self,name):
+        self.name = name
+
+    def speak(self):
+        print("My name is {}".format(self.name))
+
+
+Rodger = Dog("Rodger")
+Tommy = Dog("Tommy")
+
+
+Rodger.speak()
+Tommy.speak()

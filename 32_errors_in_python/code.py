@@ -8,11 +8,11 @@ def divide(dividend, divisor):
 
 students = [
     {"name": "Bob", "grades":[75,13,14]},
-    {"name": "Alex", "grades":[0]},
+    {"name": "Alex", "grades":[]},
     {"name": "Tom", "grades":[12,14]}
 ]
 
-print("Welcome to the average grade program.")
+print("-- Welcome to the average grade program. --")
 
 try:
     for student in students:
@@ -22,9 +22,9 @@ try:
         print(f"{name}  average grade is {average}")
         
 except ZeroDivisionError as e:   #it creates - variable e and put there error message
-    print("there are no grades yet in your list.")    
+    print(f"Error {name} has no grades.")    
 else: 
-    print(f"The average grade is {average}")
+    print("-- All students have been calculated --")
 finally:
     print("Thank you!")
 

@@ -29,6 +29,26 @@ book2 = Book.paperback("Suka yebanaya", 1500)
 #print(book2)
 #
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Store:
     def __init__(self, name):
         self.name = name

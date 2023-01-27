@@ -1,8 +1,15 @@
 def divide(dividend, divisor):
     if divisor == 0:
-        print("Divisor cannot be 0.")
-        return
+        raise ZeroDivisionError("Division")    #эта ошибка идёт вместе с питоном
 
     return dividend / divisor
 
-divide(12,0)
+
+grades = []
+
+print("Welcome to the average grade program.")
+if len(grades) == 0:
+    print("You don't have grades")    
+average = divide(sum(grades),len(grades))
+
+print(f"Average marks: {average}")

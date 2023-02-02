@@ -7,9 +7,9 @@ user = {"username": "jose", "access_level": "admin"}
 
 def make_secure(func):
     @functools.wraps(func)
-    def secure_function():
+    def secure_function(*args, **kwargs):
         if user["access_level"]  =="admin":
-            return func()
+            return func(*args, **kwargs)
         else:
             return f"No admin permission for {user['username']}."
     
